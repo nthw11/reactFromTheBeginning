@@ -1,13 +1,14 @@
-import axios from 'axios'
+import axios from 'axios';
 const weatherApi = 'http://api.openweathermap.org/data/2.5/weather';
 const weatherAPIKey = '6f3f23c0f1a2fcb7edee25d08cb9cf62';
-const scale = "imperial" //metric
+const scale = 'imperial'; //metric
 
-export default(city)=>{
-    const weatherUrl = `${weatherApi}?q=${city}&units=${scale}&appid=${weatherAPIKey}`;
-    console.log(city)
+export default (city) => {
+  const weatherUrl = `${weatherApi}?q=${city}&units=${scale}&appid=${weatherAPIKey}`;
+  axios.get(weatherUrl).then((response) => {
     return {
-        type: "cityUpdate",
-        payload: {}
-    }
-}
+      type: 'cityUpdate',
+      payload: response.data,
+    };
+  });
+};

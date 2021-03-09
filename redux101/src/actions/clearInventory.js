@@ -1,6 +1,7 @@
-export default ()=>{
-    console.log("Clear Inventory")
-    return {
-        type: 'clearInventory',
-    }
-}
+export default (operation, index) => {
+  console.log('clearinventory sanity check');
+  return {
+    type: 'clearInventory',
+    payload: {},
+  };
+};

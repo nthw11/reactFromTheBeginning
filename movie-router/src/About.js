@@ -1,10 +1,12 @@
 import React from 'react';
 
-function About(props){
-    console.log(props);
-    return(
-        <h1>About page!</h1>
-    )
+function About(props) {
+  console.log(props);
+  return (
+    <div>
+      <h1>about page</h1>
+    </div>
+  );
 }
 
 export default About;
