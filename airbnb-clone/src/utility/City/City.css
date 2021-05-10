@@ -15,6 +15,9 @@
 .city img {
   max-width: 100%;
 }
+.city a {
+  color: #fff;
+}
 
 .city .city-name,
 .city .price {
